@@ -6,13 +6,19 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "babel": {
     "presets": [
       "env",
       "react"
     ]
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/components/*.js?(x)"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/test-setup.js"
   },
   "dependencies": {
     "react": "16.4.2",
@@ -23,6 +29,10 @@
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "enzyme-to-json": "3.3.4",
+    "jest": "23.6.0",
     "webpack": "4.17.1",
     "webpack-cli": "3.1.0",
     "webpack-dev-server": "3.1.5"
